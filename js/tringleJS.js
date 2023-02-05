@@ -4323,7 +4323,8 @@ dat.GUI = dat.gui.GUI = (function (
 
   function addEventListeners() {
     window.addEventListener("resize", onWindowResize);
-    document.addEventListener("mousemove", onMouseMove);
+    const container = document.getElementById("Home");
+    container.addEventListener("mousemove", onMouseMove);
   }
 
   // function addControls() {

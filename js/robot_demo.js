@@ -3957,7 +3957,9 @@ animate();
 function init() {
   container = document.getElementById("canvas_container"); //document.createElement('div');
   // document.body.appendChild(container);
-  window.addEventListener("mousemove", onMouseMove);
+  document
+    .getElementById("Object-following-robot")
+    .addEventListener("mousemove", onMouseMove);
 
   camera = new THREE.PerspectiveCamera(
     45,
