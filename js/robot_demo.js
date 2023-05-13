@@ -4048,13 +4048,13 @@ function init() {
     window.innerWidth * SCALE_OF_RENDERER,
     window.innerHeight * SCALE_OF_RENDERER
   );
-  container.prepend(renderer.domElement);
+  try {
+    container.prepend(renderer.domElement);
 
-  document.addEventListener("mousemove", onDocumentMouseMove);
-
-  //
-
-  window.addEventListener("resize", onWindowResize);
+    document.addEventListener("mousemove", onDocumentMouseMove);
+    //
+    window.addEventListener("resize", onWindowResize);
+  } catch (error) {}
 }
 
 function onWindowResize() {
