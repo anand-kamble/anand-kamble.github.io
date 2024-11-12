@@ -1,0 +1,661 @@
+@font-face {
+  font-family: "Tungsten Bold";
+  src: url("./fonts/tungsten-bold.eot"); /* IE9 Compat Modes */
+  src: url("./fonts/tungsten-bold.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("./fonts/tungsten-bold.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("./fonts/tungsten-bold.woff") format("woff"); /* Modern Browsers */
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DINNextW1G';
+  src: url("fonts/dinnextw1g_light.otf") format('otf');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+:root {
+  --bgcolor: #000;
+  --textcolor: rgb(204, 204, 204);
+  --textcolor_sec: rgb(195, 195, 195);
+  /* --accent: rgb(238, 199, 99); */
+  /* --accent2: rgb(95, 79, 39); */
+  /* --accent: #37d1af;  */
+  /* --accent2: #ff4654; */
+  --accent: #22ffc5;
+  --accent2: #ff4655;
+  --main:#152d40;
+  --maindark:#102130;
+  --sec:#3f637a;
+  --yellow: #eac672;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  max-width: 100%;
+
+  background-color: #000;
+}
+
+#accent-holder {
+  height: calc(100vh - 20px);
+  width: 100vw;
+  padding: 20px 0 0 20px;
+  z-index: 80;
+  position: absolute;
+  background-color: var(--bgcolor);
+}
+
+.accent-lines {
+  height: 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+.accent-line {
+  width: 16px;
+  height: 2px;
+  background-color: var(--accent); /* Blue accent */
+  margin-right: 4px;
+  animation: increaseMargin 5s ease-in forwards;
+}
+
+.accent-dot {
+  width: 4px;
+  height: 2px;
+  background-color: var(--accent); /* Blue accent */
+  border-radius: 50%;
+  margin-right: 4px;
+  animation: increaseMargin 5s ease-in forwards;
+}
+
+.flipped-accent-lines {
+  float: right;
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  -moz-transform: scale(1, -1);
+  -webkit-transform: scale(1, -1);
+  -o-transform: scale(1, -1);
+  -ms-transform: scale(1, -1);
+  transform: scale(1, -1);
+}
+
+.loading-text {
+  font-family: "Tungsten Bold", sans-serif;
+  font-size: 4rem;
+  color: var(--accent2);
+  margin: 20px 0;
+  position: absolute;
+  margin: 50vh 0 0 50vw;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes increaseMargin {
+  from {
+    margin: 0 4px;
+  }
+  to {
+    margin: 0 10px;
+  }
+}
+
+.transition-div {
+  width: 100vw;
+  z-index: 100;
+  pointer-events: none;
+}
+
+#transition-holder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  /* position: relative; */
+  z-index: 100;
+  width: 100vw;
+  margin-top: 50vh;
+  transform: translateY(-50%);
+  scale: 1.5;
+  pointer-events: none;
+}
+
+#transition-div-1 {
+  /* background-color: #ba3a46; */
+  background-color: var(--accent2);
+  height: 10vh;
+  width: 10vw;
+  z-index: 110;
+  position: relative;
+}
+
+#transition-div-2 {
+  position: relative;
+  /* background-color: #ba3a46; */
+  background-color: var(--accent2);
+  height: 10vh;
+  width: 10vw;
+  z-index: 110;
+}
+
+#sub-transition-div-1 {
+  position: relative;
+  /* background-color: #ff4654; */
+  /* background-color: orangered; */
+  background-color: #ff5d68;
+  height: 5vh;
+  width: 5vw;
+  margin-top: 5vh;
+  float: right;
+  z-index: 120;
+}
+
+#sub-transition-div-2 {
+  position: relative;
+  /* background-color: orangered; */
+  /* background-color: #ff4654; */
+  background-color: #ff5d68;
+  height: 3vh;
+  width: 7vw;
+  z-index: 120;
+}
+
+.main-page {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 90;
+  position: relative;
+}
+
+.my-name {
+  font-family: "Tungsten Bold", sans-serif;
+  font-size: 4rem;
+  color: rgb(0, 0, 0); /* Blue accent */
+  margin: 20px 0;
+  text-align: center;
+  margin: 0%;
+  z-index: 100;
+  color: rgb(204, 204, 204);
+}
+
+.subtitle {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  position: absolute;
+  color: var(--textcolor);
+  transform: translateX(-50%);
+  left: 50%;
+  width: max-content;
+}
+
+#transition2{
+  /* width: calc(80vw + 4rem); */
+  width: 100vw;
+  margin-top: 50vh;
+  /* margin-left: 10vw; */
+  z-index: 110;
+  position: relative;
+}
+/* 
+.line {
+  padding: 0 2rem;
+} */
+
+.scroll-down {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 20px;
+  font-size: 0.5rem;
+  color: var(--accent2);
+  z-index: 100;
+  font-family: 'DINNextW1G', sans-serif;
+  text-align: center;
+}
+
+/* #experience {
+  height: inherit;
+  width: 100vw;
+  margin-left: 0vw;
+  z-index: 100;
+  position: relative;
+  background-color: var(--textcolor);
+  padding: 2rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+} */
+.component {
+  height: inherit;
+  width: 100vw;
+  margin-left: 0vw;
+  z-index: 100;
+  position: relative;
+  background-color: white;
+  padding: 2rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+}
+/* .education {
+  height: inherit;
+  width: 100vw;
+  margin-left: 0vw;
+  z-index: 100;
+  position: relative;
+  background-color: var(--textcolor);
+  padding: 2rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+} */
+
+
+
+
+.all-holder {
+  z-index: 100;
+  display: flex;
+  margin-top: 48px;
+  /* flex-wrap: wrap;   */
+}
+/* 
+#experience-section-title {
+  position: relative;
+  margin: 0 5vw;
+}  
+
+#education-section-title {
+  position: relative;
+  margin: 0  5vw;
+} */
+
+
+.section-title {
+  font-family: "Tungsten Bold", sans-serif;
+  font-size: 48px;
+  color: var(--maindark);
+  z-index: 100;
+  margin: 0  5vw;
+  position: relative;
+}
+
+.tassel {
+  height: 0.4rem;
+  width: 0.4rem;
+  background-color: var(--maindark);
+  /* position: absolute; */
+  margin-top: calc(-1rem - 1px);
+  transform: translateY(-50%) rotate(45deg);
+  margin-left: 50%;
+  z-index: 110;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  border-top: 1px solid var(--maindark);
+  font-family: "DINNextW1G", sans-serif;
+  z-index: 100;
+  padding: 1rem;
+  transition: .3s;  
+  max-width: 30vw;
+  margin-right: 5%;
+}
+
+.background-text{
+  font-family: "Tungsten Bold", sans-serif;
+  -webkit-text-stroke: 2px var(--maindark);
+  opacity: 0.1;
+  font-size: 20vw;
+  position: absolute;
+  margin: 0px;
+  top: 0px;
+  color: white;
+  transform: translateY(-0rem);
+}
+
+
+/* .experience-image-mask{
+  background-image: linear-gradient(90deg, rgba(0,0,0,1), rgba(0, 0, 0, 0.5));
+  width: 80vw;
+  height: 80vh;
+  position: absolute;
+  z-index: 110;
+  transition: .3s;
+} */
+
+
+/* .experience-card:hover { */
+  /* background-color: var(--maindark); */
+  /* border-top: 2px solid var(--accent2); */
+/* } */
+
+.card h3 {
+  color: var(--maindark);
+  font-size: 1.5rem;
+  margin: 10px;
+  z-index: 120;
+  position: relative;
+}
+
+.card h4 {
+  color: var(--main);
+  margin: 10px;
+  z-index: 120;
+  position: relative;
+}
+
+.card p {
+  color: var(--main);
+  font-size: 0.75rem;
+  margin: 10px;
+  z-index: 120;
+  position: relative;
+}
+
+.skills-holder {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  z-index: 120;
+  align-items: flex-start;
+  justify-content: space-around;
+  margin-top: 2rem;
+  position: relative;
+}
+
+.skill {
+  color: var(--maindark);
+  font-size: 1rem;
+  width: inherit;
+  margin: 5px;
+  border-bottom: 1px solid var(--accent2);
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: .3s;
+  font-size: 0.8rem;
+}
+
+.skill:hover {
+  background-color: var(--accent2);
+  color: var(--maindark);
+}
+
+
+#all-project-holder {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  /* grid-gap: 10%; */
+  grid-column-gap: 10%;
+  grid-template-rows: 35vh;
+}
+
+
+
+/* Customize scrollbar for webkit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 2px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: var(--main); /* Background color of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888; /* Scrollbar color */
+  border-radius: 6px; /* Rounded corners for the scrollbar thumb */
+  border: 3px solid var(--sec); /* Adds padding around the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Darker color on hover */
+}
+
+.ruler {
+  width: 2rem;
+  height: inherit;
+  position: absolute;
+  left: 5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 0%;
+  z-index: 130;
+}
+
+.vertical-line {
+  width: 2px;
+  background-color: var(--accent2);
+  height: 300vh;
+}
+
+.horizontal-line {
+  width: 1rem;
+  background-color: var(--accent2);
+  height: 1px;
+  position: absolute;
+  top: 50%;
+  z-index: 130;
+}
+
+.mask {
+  position: fixed;
+  width: 1rem;
+  height: 10vh;
+  z-index: 140;
+  background-color: var(--bgcolor);
+}
+
+.project-button {
+  background-color: transparent;
+  color: var(--textcolor);
+  padding: 4px;
+  transition: .3s;
+  text-decoration: none;
+  margin-top: 20px;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  font-family: "DINNextW1G", sans-serif;
+  bottom: 0;
+}
+
+.sub-project-button {
+  background-color: transparent;
+  padding: 8px 16px;
+  border: 1px solid var(--textcolor);
+  transition: .3s;
+}
+
+.project-button:hover .sub-project-button{
+  background-color: var(--textcolor);
+  color: var(--main);
+  border: 1px solid var(--main);
+}
+.project-button:hover {
+  background-color: var(--textcolor);
+  color: var(--main);
+}
+
+.Publication-button {
+  background-color: transparent;
+  padding: 4px;
+  color: var(--textcolor);
+  display: inline-block;
+  cursor: pointer;
+  transition: .3s;
+  float: right;
+}
+
+.sub-Publication-button {
+  background-color: var(--main);
+  padding: 8px 16px;
+  color: var(--textcolor);
+  border: 1px solid var(--main);
+  display: inline-block;
+  transition: .3s;
+}
+
+.sub-Publication-button:hover {
+  background-color: white;
+  color: var(--main);
+  border: 1px solid var(--main);
+}
+
+
+/* #mask-1 { */
+  /* background-image: linear-gradient(to bottom, var(--bgcolor), transparent); */
+
+/* } */
+
+#mask-2 {
+  bottom: 0;
+  /* background-color: linear-gradient(to bottom, var(--bgcolor), transparent ); */
+}
+
+#all-Publication-holder .card {
+  max-width: 60vw;
+}
+
+#fun {
+  background-color: var(--accent2);
+  width: 100vw;
+  height: 50vh;
+}
+
+.contacts {
+  width: 100vw;
+  height: 50vh;
+  color: var(--textcolor);
+  padding: 10vh 2vw;
+  font-family: "DINNextW1G", sans-serif;
+}
+#contact-title{
+  color: var(--textcolor);
+}
+.contact{
+  margin-left: 25vw;
+  position: relative;
+  pointer-events: visible;
+  z-index: 120;
+}
+
+.contact a {
+  text-decoration: none;
+  color: var(--accent2);
+  cursor: pointer;
+}
+
+.footer {
+  background-color: var(--main);
+  width: 100vw;
+  position: absolute;
+  left: 0;
+  margin-top: 30vh;
+  padding: 2vh 2vw;
+}
+@media screen and (max-width : 480px) {
+
+  html,body {
+    overflow-x: auto;
+  }
+
+  .contact{
+    margin-left: 5vw;
+  }
+
+  .all-holder {
+    flex-direction: column;
+  }
+
+  .tassel {
+    margin-top: 0px;
+  }
+
+  #ruler {
+    display: none;
+  }
+
+  .component {
+    flex-direction: column;
+    padding: 5vh 0 0 0 ;
+  }
+
+  .card {
+    max-width: 100vw;
+    padding: 0px;
+    margin-top: 5vh;
+  }
+
+  #all-project-holder {
+    grid-template-columns: repeat(1, auto);
+  }
+
+  .project-button {
+    width: 100vw;
+    text-align: center;
+  }
+
+  .Publication-button {
+    width: 100vw;
+    text-align: center;
+  }
+
+  #all-Publication-holder .card {
+    max-width: 100vw;
+  }
+
+  .project-button {
+    width: calc(100vw - 8px);
+  }
+
+  .Publication-button {
+    width: calc(100vw - 8px);
+  }
+  .sub-Publication-button {
+    width: 80vw;
+  }
+
+  .component {
+    padding-bottom: 10vh;
+  }
+}
+
+@media screen and (max-width : 800px) and (min-width: 481px) {
+  .all-holder {
+    flex-direction: column;
+  }
+
+  #ruler {
+    display: none;
+  }
+
+  .component {
+    flex-direction: column;
+  }
+
+  .card {
+    max-width: 80vw;
+  }
+
+  #all-project-holder {
+    grid-template-columns: repeat(1, auto);
+  }
+
+  #all-Publication-holder .card {
+    max-width: 80vw;
+  }
+
+}
