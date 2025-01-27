@@ -12,7 +12,7 @@ const __EXPERIENCE = [
     {
         title: 'Graduate Research Assistant',
         company: 'Florida State University',
-        date: 'Mar 2024 - Present',
+        date: 'Mar 2024 - Dec 2024',
         skills: ["LLM", "RAG", "Llama-Index" ,"Langchain", "Docker", "Python" ]
     },
     {
@@ -92,6 +92,13 @@ const __PUBLICATIONS = [
         company: '',
         date: '1st March 2024',
         url: 'https://arxiv.org/abs/2403.00212',
+        cites: 2
+    },
+    {
+        title: 'Custom Data Augmentation for low resource ASR using Bark and Retrieval-Based Voice Conversion',
+        company: '',
+        date: '24th November 2023',
+        url: 'https://arxiv.org/abs/2311.14836',
         cites: 1
     }
 ]

@@ -7,14 +7,14 @@ class contacts {
 
         this.root.innerHTML = `
         <div id="contact-title" class="section-title">
-            <span>C</span>
-            <span>O</span>
-            <span>N</span>
-            <span>T</span>
-            <span>A</span>
-            <span>C</span>
-            <span>T</span>
-            <span>S</span>
+            <span style="opacity: 1; margin-left: 0px;">C</span>
+            <span style="opacity: 1; margin-left: 0px;">O</span>
+            <span style="opacity: 1; margin-left: 0px;">N</span>
+            <span style="opacity: 1; margin-left: 0px;">T</span>
+            <span style="opacity: 1; margin-left: 0px;">A</span>
+            <span style="opacity: 1; margin-left: 0px;">C</span>
+            <span style="opacity: 1; margin-left: 0px;">T</span>
+            <span style="opacity: 1; margin-left: 0px;">S</span>
         </div>
         <div id="contact-info" class="contact-info">
             <h3 id="contact-email" class="contact">
