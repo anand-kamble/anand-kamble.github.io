@@ -20,7 +20,7 @@ class Experience {
     textContent.forEach((letter, i) => {
       const span = document.createElement("span");
       span.textContent = letter;
-      span.style.opacity = 0;
+      span.style.opacity = this.mobileCheck() ? 1 : 0;;
       this.section_title.appendChild(span);
     });
 
@@ -69,7 +69,7 @@ class Experience {
       experience_card.appendChild(company);
       experience_card.appendChild(date);
       experience_card.appendChild(skills_holder);
-      experience_card.style.opacity =  0;
+      experience_card.style.opacity =  this.mobileCheck() ? 1 : 0;
 
       this.all_experience_holder.appendChild(experience_card);
       this.cards.push(experience_card);
@@ -84,7 +84,6 @@ class Experience {
 
     const observer = new IntersectionObserver(
       (entries, observer) => {
-
         if (entries[0].intersectionRatio < 1) {
           return;
         }
