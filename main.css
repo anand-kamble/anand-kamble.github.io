@@ -1,0 +1,83 @@
+/* Reset and basic styles */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html, body {
+    height: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    overflow: hidden; /* Prevent scroll during animation */
+  }
+  /* Background for final page (using a random Unsplash image) */
+  body {
+    background: url('https://w.wallhaven.cc/full/kx/wallhaven-kxp5r7.jpg') no-repeat center center fixed;
+    background-size: cover;
+  }
+  /* Loading overlay styles */
+  #loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: #000; */
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #loading-dot {
+    background: #000000;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  #frorsted-container-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+  }
+  /* Frosted glass container (initially hidden) */
+  .frosted-container {
+    position: relative;
+    padding: 2rem;
+    /* height: calc(100% - 5%); leaves 5% margin top/bottom */
+    height: 98vh;
+    width: 98vw;
+    background: 
+      radial-gradient(circle at center, 
+        rgba(255, 255, 255, 0.2) 0%, 
+        rgba(255, 255, 255, 0.2) 40%, 
+        rgba(255, 255, 255, 0.6) 70%, 
+        rgba(255, 255, 255, 0.8) 100%),
+      rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #333333;
+    opacity: 1;
+    pointer-events: none;
+  }
+  /* Make text lines initially hidden for line-by-line animation */
+  .line {
+    opacity: 0;
+  }
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    line-height: 1.5;
+  }
