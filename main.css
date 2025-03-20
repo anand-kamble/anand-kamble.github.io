@@ -27,6 +27,8 @@
   --color-gray-3:#858585;
   --color-gray-2:#343436;
   --color-gray-1:#1C1C1E;
+
+  --color-blue-0:#2E89E3;
 }
 
 .squirclized {
@@ -67,17 +69,18 @@ h1 {
 }
 
 .main_holder {
-  width: 70vh;
+  width: 42rem;
   border: 1px solid var(--color-gray-0);
   border-radius: 12px;
   padding: 0 20px;
-  margin: 20vh 0 20vh 50vw;
+  margin: 10vh 0 20vh 50vw;
   transform: translateX(-50%);
 }
 
 .hfill {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .f32 {
@@ -90,7 +93,36 @@ h1 {
 
 .image {
   height: 200px;
-  /* aspect-ratio: 1 /1; */
+  aspect-ratio: 1 /1;
   object-fit: cover;
   border-radius: 12px;
+  margin: 0 6px;
+}
+
+.profilephoto {
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  padding: 12px 0;
+}
+
+.external-link {
+  height: 19px;
+  filter: invert(37%) sepia(72%) saturate(562%) hue-rotate(190deg) brightness(95%) contrast(90%);
+  cursor: pointer;
+  transform: translateY(4px);
+}
+
+
+@media screen and (max-width: 768px) {
+  .main_holder {
+    width: calc(100% - 40px);
+    margin-left: 0vw;
+    transform: translateX(-0%);
+  }
+  .hfill {
+    display: grid;
+  }
+  
 }
