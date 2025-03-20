@@ -1,83 +1,96 @@
-/* Reset and basic styles */
-*, *::before, *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  html, body {
-    height: 100%;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    overflow: hidden; /* Prevent scroll during animation */
-  }
-  /* Background for final page (using a random Unsplash image) */
-  body {
-    background: url('https://w.wallhaven.cc/full/kx/wallhaven-kxp5r7.jpg') no-repeat center center fixed;
-    background-size: cover;
-  }
-  /* Loading overlay styles */
-  #loading-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    /* background: #000; */
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  #loading-dot {
-    background: #000000;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-  }
-  #frorsted-container-wrapper{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100vw;
-  }
-  /* Frosted glass container (initially hidden) */
-  .frosted-container {
-    position: relative;
-    padding: 2rem;
-    /* height: calc(100% - 5%); leaves 5% margin top/bottom */
-    height: 98vh;
-    width: 98vw;
-    background: 
-      radial-gradient(circle at center, 
-        rgba(255, 255, 255, 0.2) 0%, 
-        rgba(255, 255, 255, 0.2) 40%, 
-        rgba(255, 255, 255, 0.6) 70%, 
-        rgba(255, 255, 255, 0.8) 100%),
-      rgba(255, 255, 255, 0.2);
-    border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #333333;
-    opacity: 1;
-    pointer-events: none;
-  }
-  /* Make text lines initially hidden for line-by-line animation */
-  .line {
-    opacity: 0;
-  }
-  h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-  }
-  p {
-    font-size: 1.2rem;
-    max-width: 800px;
-    line-height: 1.5;
-  }
+@font-face {
+  font-family: 'MyFont';
+  src: url('./sf-pro-display/SFPRODISPLAYBOLD.OTF') format('opentype'); /* or format('otf') */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MyFontLight';
+  src: url('./sf-pro-display/SFPRODISPLAYREGULAR.OTF') format('opentype'); /* or format('otf') */
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+:root {
+  --font-bold: 'MyFont';
+  --font-light: 'MyFontLight';
+
+  --color-black-1: #1F1F1F;
+
+  --color-white-0:#FFFFFF;
+  --color-white-1:#F7F6F8;
+
+  --color-gray-0:#E5E5EA;
+  --color-gray-3:#858585;
+  --color-gray-2:#343436;
+  --color-gray-1:#1C1C1E;
+}
+
+.squirclized {
+  border-radius: 12px; /* Or any desired radius */
+  clip-path: polygon(
+    50% 0%,
+    100% 20%,
+    100% 80%,
+    50% 100%,
+    0% 80%,
+    0% 20%
+  );
+
+}
+
+body {
+  font-family: 'MyFontLight', sans-serif;
+  background-color: var(--color-white-1);
+  color: var(--color-black-1);
+}
+
+hr {
+  border-top: 1px var(--color-gray-0) solid;
+}
+
+h1 {
+  font-family: 'MyFont', sans-serif;
+  font-size: 24px;
+  color: var(--color-black-1);
+}
+
+.myfont {
+  font-family: 'MyFont', sans-serif;
+}
+
+.secondary {
+  color: var(--color-gray-3);
+}
+
+.main_holder {
+  width: 70vh;
+  border: 1px solid var(--color-gray-0);
+  border-radius: 12px;
+  padding: 0 20px;
+  margin: 20vh 0 20vh 50vw;
+  transform: translateX(-50%);
+}
+
+.hfill {
+  display: flex;
+  justify-content: space-between;
+}
+
+.f32 {
+  font-size: 32px;
+}
+
+.f24 {
+  font-size: 24px;
+}
+
+.image {
+  height: 200px;
+  /* aspect-ratio: 1 /1; */
+  object-fit: cover;
+  border-radius: 12px;
+}

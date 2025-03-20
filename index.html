@@ -7,24 +7,147 @@
     <link rel="stylesheet" href="./main.css" />
 </head>
 <body>
-  <!-- Loading overlay with dot -->
-  <div id="loading-overlay">
-      <div id="loading-dot"></div>
-      </div>
-      
-      <!-- The final frosted glass container with text -->
-      <div id="frorsted-container-wrapper">
-       <div class="frosted-container" id="frosted-container">
-         <h1 class="line">Welcome to My Modern Page</h1>
-         <p class="line">
-           This frosted glass div gradually increases in opacity toward its borders.
-           Enjoy the smooth transition and the line‑by‑line text reveal!
-         </p>
-       </div>
-   </div>
 
-  <!-- Include anime.js from CDN -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  
+  <div class="main_holder">
+    <h1 class="f32">Anand Kamble</h1>
+    <hr />
+  
+    <h1>Education</h1>
+    <p>
+      <span class="hfill">
+        <span class="myfont">Master of Science (M.S.) in Computational Science</span>
+        <span>(Aug 2023 - Dec 2024)</span>
+      </span>
+      Florida State University<br />
+      <span class="secondary">Coursework: High-Performance Computing, Scientific Programming, AI Methods &amp; Applications.</span>
+    </p>
+    <hr />
+    <p>
+      <span class="hfill">
+        <span class="myfont">Bachelor of Engineering (B.E.) in Mechanical</span>
+        <span>(Aug 2018 - May 2022)</span>
+      </span>
+      Savitribai Phule Pune University<br />
+      <span class="secondary">Coursework: Fundamentals of Programming, Robotics, Linear Algebra, Calculus, CAD/CAM.</span>
+    </p>
+    <hr />
+  
+    <h1>Experience</h1>
+    <p>
+      <span class="hfill">
+        <span class="myfont">AI Engineer - Graduate Research Assistant</span>
+        <span>(Mar 2024 - Present)</span>
+      </span>
+      Department of Scientific Computing, Tallahassee, FL<br />
+      <span class="secondary">Tools: LangChain, Ollama, Docker, AI Agents</span>
+    </p>
+    <p>
+      - Collaborated with Dr. Gordon Erlebacher on LLM, AI agents, LoRa fine-tuning, and RAG pipelines.<br />
+      - Analyzed airline data using Pandas, SQL, and visualization tools, incorporating statistical modeling and time series analysis.<br />
+      - Scaled transformer model inference across a 10-node cluster using SLURM, Nginx, and Docker.
+    </p>
+    <hr />
+    <p>
+      <span class="hfill">
+        <span class="myfont">Software Engineer</span>
+        <span>(Apr 2022 - Nov 2022)</span>
+      </span>
+      IncerroAI, Pune, MH<br />
+      <span class="secondary">Tools: TypeScript/JavaScript, ReactJS, Cypress, DevOps</span>
+    </p>
+    <p>
+      - Developed high-performance web apps using ReactJS, ThreeJS, Redux, MaterialUI, TailwindCSS, and Axios.<br />
+      - Implemented Styled Components, React Navigation, push notifications, and web workers.<br />
+      - Reduced re-renders by 40% via memoization and efficient state management.<br />
+      - Built secure user authentication using OAuth, JWT, and AsyncStorage.
+    </p>
+    <hr />
+  
+    <h1>Projects</h1>
+    <p>
+      <span class="hfill">
+        <span class="myfont">Automatic Grading System using LLM</span>
+        <span></span>
+      </span>
+      <span class="secondary">Tools: LangChain, Ollama, Docker, CUDA</span>
+    </p>
+    <p>
+      - Implemented automated grading using LangChain, LangGraph, Ollama, Transformers, and model evaluation.<br />
+      - Deployed via Docker with a reverse proxy and CI/CD for cloud scalability.
+    </p>
+    <hr />
+    <p>
+      <span class="hfill">
+        <span class="myfont">Object Following Robot</span>
+        <span></span>
+      </span>
+      <span class="secondary">Tools: RaspberryPi, Python, OpenCV, SocketIO</span>
+    </p>
+    <p>
+      - Developed a decision-making algorithm with a response time under 200ms.<br />
+      - Created a computer vision-powered robot to track objects using Raspberry Pi and WebSockets.
+    </p>
+    <hr />
+    <p>
+      <span class="hfill">
+        <span class="myfont">Fortnide: A Competitive 3D Game on Web</span>
+        <span></span>
+      </span>
+      <span class="secondary">Tools: TypeScript, ThreeJS, WebGL</span>
+    </p>
+    <p>
+      - Integrated a custom physics engine simulating gravity, projectiles, and wind effects.<br />
+      - Designed a rendering worker to handle multiple scenes and synchronize with the physics engine for up to 144Hz performance.
+    </p>
+    <div>
+      <img class="image" src="https://raw.githubusercontent.com/anand-kamble/fortnide/refs/heads/master/docs/images/Projectile%20Render.png"/>
+    </div>
+
+    <hr />
+  
+    <h1>Publications</h1>
+    <p>
+      <span class="hfill">
+        <span>Object Following Robot Based on AI/ML</span>
+        <span></span>
+      </span>
+      <br />
+      <span class="secondary">Published in Materials Today: Proceedings, 2022 - Elsevier.</span>
+    </p>
+    <hr />
+    <p>
+      <span class="hfill">
+        <span>Transcription and Translation of Videos using Fine-Tuned XLSR Wav2Vec2 &amp; mBART</span>
+        <span></span>
+      </span>
+      <br />
+      <span class="secondary">Published on arXiv.</span>
+    </p>
+    <hr />
+  
+    <h1>Skills</h1>
+    <p>
+      <strong>Programming Languages:</strong> Python, TypeScript/JavaScript, C/C++, Scala, Java<br />
+      <strong>Frameworks/Libraries:</strong> LangChain, LangGraph, PyTorch, TensorFlow, scikit-learn, Pandas, Hugging Face, CUDA<br />
+      <strong>Data Visualization:</strong> Matplotlib, Seaborn, Plotly, dash, D3.js<br />
+      <strong>DevOps/Cloud:</strong> Jenkins, Docker, Docker Compose, AWS, Terraform, GitHub Actions<br />
+      <strong>Other:</strong> PostgreSQL, Supabase, Git, GitHub
+    </p>
+    <hr />
+  
+    <h1>Contact</h1>
+    <p>
+      <strong>Phone:</strong> 448-200-9180<br />
+      <strong>Email:</strong> <a href="mailto:amkamble@icloud.com">amkamble@icloud.com</a><br />
+      <strong>Website:</strong> <a href="https://people.sc.fsu.edu/~amk23j/">Profile</a><br />
+      <strong>GitHub:</strong> <a href="https://github.com/anand-kamble">anand-kamble</a><br />
+      <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/anandmkamble/">anandmkamble</a>
+    </p>
+  </div>
+  
+  
+
   <script src="./index.js"></script>
 </body>
 </html>
