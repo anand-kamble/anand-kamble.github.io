@@ -1,0 +1,128 @@
+@font-face {
+  font-family: 'MyFont';
+  src: url('./sf-pro-display/SFPRODISPLAYBOLD.OTF') format('opentype'); /* or format('otf') */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MyFontLight';
+  src: url('./sf-pro-display/SFPRODISPLAYREGULAR.OTF') format('opentype'); /* or format('otf') */
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+:root {
+  --font-bold: 'MyFont';
+  --font-light: 'MyFontLight';
+
+  --color-black-1: #1F1F1F;
+
+  --color-white-0:#FFFFFF;
+  --color-white-1:#F7F6F8;
+
+  --color-gray-0:#E5E5EA;
+  --color-gray-3:#858585;
+  --color-gray-2:#343436;
+  --color-gray-1:#1C1C1E;
+
+  --color-blue-0:#2E89E3;
+}
+
+.squirclized {
+  border-radius: 12px; /* Or any desired radius */
+  clip-path: polygon(
+    50% 0%,
+    100% 20%,
+    100% 80%,
+    50% 100%,
+    0% 80%,
+    0% 20%
+  );
+
+}
+
+body {
+  font-family: 'MyFontLight', sans-serif;
+  background-color: var(--color-white-1);
+  color: var(--color-black-1);
+}
+
+hr {
+  border-top: 1px var(--color-gray-0) solid;
+}
+
+h1 {
+  font-family: 'MyFont', sans-serif;
+  font-size: 24px;
+  color: var(--color-black-1);
+}
+
+.myfont {
+  font-family: 'MyFont', sans-serif;
+}
+
+.secondary {
+  color: var(--color-gray-3);
+}
+
+.main_holder {
+  width: 42rem;
+  border: 1px solid var(--color-gray-0);
+  border-radius: 12px;
+  padding: 0 20px;
+  margin: 10vh 0 20vh 50vw;
+  transform: translateX(-50%);
+}
+
+.hfill {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.f32 {
+  font-size: 32px;
+}
+
+.f24 {
+  font-size: 24px;
+}
+
+.image {
+  height: 200px;
+  aspect-ratio: 1 /1;
+  object-fit: cover;
+  border-radius: 12px;
+  margin: 0 6px;
+}
+
+.profilephoto {
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  padding: 12px 0;
+}
+
+.external-link {
+  height: 19px;
+  filter: invert(37%) sepia(72%) saturate(562%) hue-rotate(190deg) brightness(95%) contrast(90%);
+  cursor: pointer;
+  transform: translateY(4px);
+}
+
+
+@media screen and (max-width: 768px) {
+  .main_holder {
+    width: calc(100% - 40px);
+    margin-left: 0vw;
+    transform: translateX(-0%);
+  }
+  .hfill {
+    display: grid;
+  }
+  
+}
