@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://anand-kamble.github.io/sitemap.xml
