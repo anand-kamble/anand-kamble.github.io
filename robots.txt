@@ -1,14 +1,5 @@
 User-agent: *
 Allow: /
-Disallow: /private/
-Disallow: /admin/
-Disallow: /temp/
 
-# Crawl-delay
-Crawl-delay: 10
-
-# Sitemaps
+# Sitemap
 Sitemap: https://anand-kamble.github.io/sitemap.xml
-
-# Host
-Host: https://anand-kamble.github.io
